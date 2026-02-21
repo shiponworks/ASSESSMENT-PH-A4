@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Favicons Icons Link -->
+  <link rel="shortcut icon" href="images/icons/favacion.png" type="image/x-icon">
+  <!-- Output Css link  -->
+  <link rel="stylesheet" href="src/output.css">
+  <title>ASSESSMENT-A4</title>
+</head>
+
+<body>
+
+
+  <header>
+
+    <section class="paddingXl">
+      <div class="containers paddingXl borders space-y-5">
+
+        <!-- Title -->
+        <div>
+          <h1 class="text-2xl text-hadingColor font-semibold md:text-3xl">Job Application Tracker</h1>
+        </div>
+
+        <!-- Header Dashboard -->
+        <div class="grid gap-4 grid-cols-1 items-center sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- items 1-->
+          <div class="bg-white py-5 px-4 space-y-2 rounded-lg shadow-sm transition duration-300 hover:-translate-y-1">
+            <h2 class="text-lg text-hadingColor">Total</h2>
+            <span id="totalCounts" class="text-3xl text-hadingColor">0</span>
+          </div>
+
+          <!-- items 2-->
+          <div class="bg-white py-5 space-y-2 px-4 rounded-lg shadow-sm transition duration-300 hover:-translate-y-1">
+            <h2 class="text-lg text-hadingColor">Interview</h2>
+            <span id="interviewCount" class="text-3xl text-[#10B981]">0</span>
+          </div>
+
+          <!-- items 3-->
+          <div class="bg-white py-5 px-4 rounded-lg shadow-sm transition duration-300 hover:-translate-y-1">
+            <h2 class="text-lg text-hadingColor">Rejected</h2>
+            <span id="rejectedCounts" class="text-3xl text-[#EF4444]">0</span>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+  </header>
+
+
+  <main>
+
+    <!-- Job Cards section -->
+    <section class="paddingXl">
+
+      <div class="containers">
+
+        <!-- Title And 3 Button -->
+        <div class="space-y-4">
+
+          <div class="flex justify-between">
+            <!-- title -->
+            <div>
+              <h2 class="text-3xl font-bold text-hadingColor">Available Jobs</h2>
+            </div>
+
+            <!-- Counts jobs -->
+            <div>
+              <p><span id="AllJobs" class="text-lg font-medium">0</span> Jobs</p>
+            </div>
+
+          </div>
+
+          <!-- buttons 3 -->
+          <div>
+            <button onclick="toggleStyle('allAvailableJobButton')" id="allAvailableJobButton"
+              class="btn bg-primaryColor text-white">All</button>
+            <button onclick="toggleStyle('interviewAvailableButton')" id="interviewAvailableButton"
+              class="btn text-grayColor">Interview</button>
+            <button onclick="toggleStyle('rejectedAvailableJobs')" id="rejectedAvailableJobs"
+              class="btn text-grayColor">Rejected</button>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- All Available Jobs Section -->
+    <section id="allSection" class="sections paddingXl">
+      <div class="containers py-5">
+
+        <!-- No Jobs Available -->
+        <div class="hidden bg-white py-25  flex-col items-center justify-center rounded-md">
+          <img src="images/jobs.png" alt="img" class="mx-auto">
+          <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
+          <p class="text-grayColor">Check back soon for new job opportunities</p>
+        </div>
+
+        <!-- All Jobs Cards -->
+        <div>
+
+          <!-- card 1 -->
+          <div class="bg-white py-8 px-2 rounded-lg space-y-4 sh">
+
+            <!-- Title And Delete btn -->
+            <div class="flex justify-between items-center">
+
+              <!-- Title Subtitle -->
+              <div class="space-y-1">
+                <h2 class="text-hadingColor font-semibold text-2xl">Mobile First Corp</h2>
+                <p class="text-grayColor text-sm">React Native Developer</p>
+              </div>
+
+              <!-- deletes Buttons -->
+              <div>
+                <button class="btn rounded-full">
+                  <img src="images/icons/Trash.png" alt="icons">
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Type Job And Salary -->
+            <div>
+              <ul class="flex gap-4 list-disc list-inside text-grayColor">
+                <li class="list-none text-sm">Remote</li>
+                <li class="marker:text-grayColor text-sm">Full Time</li>
+                <li class="marker:text-grayColor text-sm">80k - 100k</li>
+              </ul>
+            </div>
+
+            <!-- NOT APPLIED BTN -->
+            <div>
+              <button class="btn bg-[#EEF4FF] text-hadingColor uppercase outline-none border-none">Not Applied</button>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-grayColor text-sm">Build cross-platform mobile applications using React Native. Work on
+                products
+                used by millions of users
+                worldwide.</p>
+            </div>
+
+            <!-- 2 buttons interview and Rejected -->
+            <div class="flex gap-4">
+              <button class="btn btn-outline btn-success">interview</button>
+              <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Interview Available Jobs Section -->
+    <section id="interviewSection" class="sections paddingXl hidden">
+      <div class="containers">
+
+        <!-- No Jobs Available -->
+        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
+          <img src="images/jobs.png" alt="img" class="mx-auto">
+          <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
+          <p class="text-grayColor">Check back soon for new job opportunities</p>
+        </div>
+
+        <!-- All Interview Cards  -->
+        <div></div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Rejected Available Jobs Section -->
+    <section id="rejectedSection" class="sections paddingXl hidden">
+      <div class="containers">
+
+        <!-- No Jobs Available -->
+        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
+          <img src="images/jobs.png" alt="img" class="mx-auto">
+          <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
+          <p class="text-grayColor">Check back soon for new job opportunities</p>
+        </div>
+
+        <!-- All Rejected Cards  -->
+        <div></div>
+
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Js link  -->
+  <script src="Js/button.js"></script>
+
+
+</body>
+
+</html>

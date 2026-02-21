@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+/* DaisYui Themes */
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake;
+}
+
+/* Custom Color And Fonts */
+@theme {
+  --color-primaryColor: #3b82f6;
+  --color-srcColor: ;
+
+  /* hading Color */
+  --color-hadingColor: #002c5c;
+  --color-praGroupColor: ;
+
+  /* Bg color */
+  --color-bgPrimaryLight: #f8fafc;
+
+  /* gray color */
+  --color-grayColor: #64748b;
+  /* Font  */
+  --font-primary: 'Poppins', sans-serif;
+}
+
+/* Custom Class */
+@layer utilities {
+  body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bgPrimaryLight);
+  }
+  .containers {
+    @apply max-w-[1440px] mx-auto p-2;
+  }
+  .paddingXl {
+    @apply py-10 px-4;
+  }
+  .borders {
+    border-bottom: 1px solid #ddd;
+  }
+}
