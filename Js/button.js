@@ -1,9 +1,3 @@
-const getAllButton = document.getElementById('allAvailableJobButton');
-const getInterviewButton = document.getElementById('interviewAvailableButton');
-const getRejectedButton = document.getElementById('rejectedAvailableJobs');
-
-//
-
 const getButton = document.querySelectorAll('.btn');
 const getAllSection = document.querySelectorAll('.sections');
 

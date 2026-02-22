@@ -109,17 +109,42 @@
       <div class="containers py-5">
 
         <!-- No Jobs Available -->
-        <div class="hidden bg-white py-25  flex-col items-center justify-center rounded-md">
+        <div id="noJobsAvailable"
+          class="hidden bg-white py-25  flex-col items-center justify-center text-center rounded-md">
           <img src="images/jobs.png" alt="img" class="mx-auto">
           <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
           <p class="text-grayColor">Check back soon for new job opportunities</p>
         </div>
 
         <!-- All Jobs Cards -->
+        <div id="AllJobsCards" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- all card renders completes -->
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- Interview Available Jobs Section -->
+    <section id="interviewSection" class="sections paddingXl hidden">
+      <div class="containers">
+
+        <!-- No Jobs Available -->
+        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
+          <img src="images/jobs.png" alt="img" class="mx-auto">
+          <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
+          <p class="text-grayColor">Check back soon for new job opportunities</p>
+        </div>
+
+        <!-- All Interview Cards  -->
         <div>
 
           <!-- card 1 -->
-          <div class="bg-white py-8 px-2 rounded-lg space-y-4 sh">
+          <div
+            class="bg-white py-8 px-4 rounded-lg space-y-4 border shadow-sm border-gray-200 transition duration-300 hover:-translate-y-1 cursor-pointer">
 
             <!-- Title And Delete btn -->
             <div class="flex justify-between items-center">
@@ -176,25 +201,6 @@
     </section>
 
 
-    <!-- Interview Available Jobs Section -->
-    <section id="interviewSection" class="sections paddingXl hidden">
-      <div class="containers">
-
-        <!-- No Jobs Available -->
-        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
-          <img src="images/jobs.png" alt="img" class="mx-auto">
-          <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
-          <p class="text-grayColor">Check back soon for new job opportunities</p>
-        </div>
-
-        <!-- All Interview Cards  -->
-        <div></div>
-
-
-      </div>
-    </section>
-
-
     <!-- Rejected Available Jobs Section -->
     <section id="rejectedSection" class="sections paddingXl hidden">
       <div class="containers">
@@ -218,6 +224,7 @@
 
   <!-- Js link  -->
   <script src="Js/button.js"></script>
+  <script src="Js/jobs.js"></script>
 
 
 </body>
