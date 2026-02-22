@@ -20,12 +20,19 @@ function toggleStyle(id) {
     section.classList.add('hidden');
   });
 
+  // Hidden Of Counts
+  document.getElementById('interviewOfCounts').classList.add('hidden');
+  document.getElementById('rejectedOfCounts').classList.add('hidden');
+
   // Show Section
   if (id === 'allAvailableJobButton') {
     document.getElementById('allSection').classList.remove('hidden');
   } else if (id === 'interviewAvailableButton') {
     document.getElementById('interviewSection').classList.remove('hidden');
+    document.getElementById('interviewOfCounts').classList.remove('hidden');
+    // const crateInterviewCount = document.createElement('p');
   } else if (id === 'rejectedAvailableJobs') {
     document.getElementById('rejectedSection').classList.remove('hidden');
+    document.getElementById('rejectedOfCounts').classList.remove('hidden');
   }
 }

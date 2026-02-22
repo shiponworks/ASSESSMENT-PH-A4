@@ -79,8 +79,26 @@
             </div>
 
             <!-- Counts jobs -->
-            <div>
-              <p><span id="AllJobs" class="text-lg font-medium">0</span> Jobs</p>
+            <div class="flex gap-2 items-center">
+
+              <!-- interview Count of -->
+              <p id="interviewOfCounts" class="hidden flex gap-1 text-lg font-medium text-grayColor">
+                <span id="interviewCountNumber">0</span>
+                <span>of</span>
+              </p>
+
+              <!-- Rejected Count of -->
+              <p id="rejectedOfCounts" class="hidden flex gap-1 text-lg font-medium text-grayColor">
+                <span id="rejectedCountNumber">0</span>
+                <span>of</span>
+              </p>
+
+              <!-- All Counts of-->
+              <p class="text-lg font-medium text-grayColor"><span id="AllJobs"
+                  class="text-hadingColor text-lg font-medium">0</span>
+                Jobs</p>
+
+
             </div>
 
           </div>
@@ -133,7 +151,7 @@
       <div class="containers">
 
         <!-- No Jobs Available -->
-        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
+        <div id="noAvailableInterviewJobs" class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
           <img src="images/jobs.png" alt="img" class="mx-auto">
           <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
           <p class="text-grayColor">Check back soon for new job opportunities</p>
@@ -141,58 +159,10 @@
 
         <!-- All Interview Cards  -->
         <div>
-
-          <!-- card 1 -->
-          <div
-            class="bg-white py-8 px-4 rounded-lg space-y-4 border shadow-sm border-gray-200 transition duration-300 hover:-translate-y-1 cursor-pointer">
-
-            <!-- Title And Delete btn -->
-            <div class="flex justify-between items-center">
-
-              <!-- Title Subtitle -->
-              <div class="space-y-1">
-                <h2 class="text-hadingColor font-semibold text-2xl">Mobile First Corp</h2>
-                <p class="text-grayColor text-sm">React Native Developer</p>
-              </div>
-
-              <!-- deletes Buttons -->
-              <div>
-                <button class="btn rounded-full">
-                  <img src="images/icons/Trash.png" alt="icons">
-                </button>
-              </div>
-
-            </div>
-
-            <!-- Type Job And Salary -->
-            <div>
-              <ul class="flex gap-4 list-disc list-inside text-grayColor">
-                <li class="list-none text-sm">Remote</li>
-                <li class="marker:text-grayColor text-sm">Full Time</li>
-                <li class="marker:text-grayColor text-sm">80k - 100k</li>
-              </ul>
-            </div>
-
-            <!-- NOT APPLIED BTN -->
-            <div>
-              <button class="btn bg-[#EEF4FF] text-hadingColor uppercase outline-none border-none">Not Applied</button>
-            </div>
-
-            <!-- Description -->
-            <div>
-              <p class="text-grayColor text-sm">Build cross-platform mobile applications using React Native. Work on
-                products
-                used by millions of users
-                worldwide.</p>
-            </div>
-
-            <!-- 2 buttons interview and Rejected -->
-            <div class="flex gap-4">
-              <button class="btn btn-outline btn-success">interview</button>
-              <button class="btn btn-outline btn-error">Rejected</button>
-            </div>
+          <div id="AllInterviewCards">
 
           </div>
+
 
         </div>
 
@@ -206,14 +176,16 @@
       <div class="containers">
 
         <!-- No Jobs Available -->
-        <div class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
+        <div id="rejectedNoJobsAvailable" class="bg-white py-25 flex flex-col items-center justify-center rounded-md">
           <img src="images/jobs.png" alt="img" class="mx-auto">
           <h2 class="text-hadingColor font-semibold text-lg">No jobs available</h2>
           <p class="text-grayColor">Check back soon for new job opportunities</p>
         </div>
 
         <!-- All Rejected Cards  -->
-        <div></div>
+        <div id="RejectedCardElement">
+
+        </div>
 
 
       </div>
